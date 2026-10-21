@@ -8,7 +8,7 @@ Exercício de lógica de programação transformado em aplicativo web.
 - **Entrada:** campo de idade com botões − / +, controle deslizante e exemplos rápidos, com validação (vazio, negativo, decimal, acima de 150).
 - **Saída:** os quatro resultados com a conta que gerou cada um.
 - **Como o programa pensa:** o fluxo Entrada → Processamento → Saída com os valores reais.
-- **Código:** o mesmo algoritmo em Portugol, Python e JavaScript, atualizado com a idade digitada.
+- **Código:** o mesmo algoritmo em Portugol Studio, Python e JavaScript, atualizado com a idade digitada.
 
 ## Regras de conversão
 | De | Para | Conta |

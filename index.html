@@ -228,7 +228,7 @@
   <div class="section-title">O mesmo algoritmo em código</div>
   <section class="card code-card">
     <div class="tabs" role="tablist">
-      <button class="tab" role="tab" aria-selected="true" data-lang="portugol">Portugol</button>
+      <button class="tab" role="tab" aria-selected="true" data-lang="portugol">Portugol Studio</button>
       <button class="tab" role="tab" aria-selected="false" data-lang="python">Python</button>
       <button class="tab" role="tab" aria-selected="false" data-lang="js">JavaScript</button>
       <button class="copy" id="copyBtn">Copiar código</button>
@@ -319,23 +319,26 @@
 
   // ===== Código de exemplo (com o valor digitado) =====
   const codigos = {
-    portugol: (i) => `algoritmo "IdadeEmTempo"
-var
-  idade, meses, dias, horas, minutos: inteiro
-inicio
-  escreva("Digite sua idade em anos: ")
-  leia(idade)              // você digitou: ${i}
+    portugol: (i) => `programa
+{
+	funcao inicio()
+	{
+		inteiro idade, meses, dias, horas, minutos
 
-  meses <- idade * 12
-  dias <- idade * 365
-  horas <- dias * 24
-  minutos <- horas * 60
+		escreva("Digite sua idade em anos: ")
+		leia(idade)            // você digitou: ${i}
 
-  escreval("Meses: ", meses)      // ${fmt(i*12)}
-  escreval("Dias: ", dias)        // ${fmt(i*365)}
-  escreval("Horas: ", horas)      // ${fmt(i*365*24)}
-  escreval("Minutos: ", minutos)  // ${fmt(i*365*24*60)}
-fimalgoritmo`,
+		meses = idade * 12
+		dias = idade * 365
+		horas = dias * 24
+		minutos = horas * 60
+
+		escreva("Meses: ", meses, "\\n")      // ${fmt(i*12)}
+		escreva("Dias: ", dias, "\\n")        // ${fmt(i*365)}
+		escreva("Horas: ", horas, "\\n")      // ${fmt(i*365*24)}
+		escreva("Minutos: ", minutos, "\\n")  // ${fmt(i*365*24*60)}
+	}
+}`,
     python: (i) => `idade = int(input("Digite sua idade em anos: "))  # você digitou: ${i}
 
 meses = idade * 12
@@ -361,7 +364,7 @@ console.log("Minutos:", minutos);  // ${fmt(i*365*24*60)}`
   };
 
   const palavras = {
-    portugol: ['algoritmo','var','inteiro','inicio','fimalgoritmo','leia','escreva','escreval'],
+    portugol: ['programa','funcao','inicio','inteiro','leia','escreva'],
     python: ['int','input','print'],
     js: ['const','Number','prompt','console','log']
   };
